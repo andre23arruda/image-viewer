@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href='assets/icon.ico'/>
+    <title>Image Viewer</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body onload="fade_screen()">
+    <h1>Image Viewer</h1>
+
+    <div class="select-container">
+        <input type="file" name="file" id="file" class="inputfile" onchange="select_files()" multiple/>
+        <label for="file">Choose a file</label>
+    </div>
+
+    <div class="image-container" style="display:none;">
+        <input class="button-change" id="button-left" type="button" value="<<" onclick="change_image('+')">
+        <img class="image" src="" height="440" alt="">
+        <input class="button-change" id="button-right" type="button" value=">>" onclick="change_image('-')">
+        <label id="button-X" for="exit" onclick="display_image(null)">X</label>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
