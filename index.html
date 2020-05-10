@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href='assets/icon.ico'/>
     <title>Image Viewer</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/desktop.css" media="screen">
+    <link rel="stylesheet" href="./styles/mobile.css" media="(max-width: 700px)">
 </head>
-<body onload="fade_screen()">
+<body onload="fade_screen()" onresize="set_style()">
     <h1>Image Viewer</h1>
 
     <div class="select-container">
@@ -17,7 +18,7 @@
 
     <div class="image-container" style="display:none;">
         <input class="button-change" id="button-left" type="button" value="<<" onclick="change_image('+')">
-        <img class="image" src="" height="440" alt="">
+        <img class="image" src="" alt="">
         <input class="button-change" id="button-right" type="button" value=">>" onclick="change_image('-')">
         <label id="button-X" for="exit" onclick="display_image(null)">X</label>
     </div>
